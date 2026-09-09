@@ -8,15 +8,19 @@ const notes = [
         id: 1,
         title: 'Note 1',
         content: 'This is the first note.',
-        createdAt: new Date().toISOString(),
-        updatedAt: new Date().toISOString()
+        createdAt: new 
+        Date().toISOString(),
+        updatedAt: new 
+        Date().toISOString()
     },
     {
         id: 2,
         title: 'Note 2',
         content: 'This is the second note.',
-        createdAt: new Date().toISOString(),
-        updatedAt: new Date().toISOString()
+        createdAt: new 
+        Date().toISOString(),
+        updatedAt: new 
+        Date().toISOString()
     }
 ];
 
@@ -34,11 +38,13 @@ app.post('/api/notes', (req, res) => {
     }
    
     const newNote = {
-        id: notes.length + 1,
+        id: Date.now(),
         title: req.body.title,
         content: req.body.content,
-        createdAt: new Date().toISOString(),
-        updatedAt: new Date().toISOString()
+        createdAt: new 
+        Date().toISOString(),
+        updatedAt: new 
+        Date().toISOString()
     };
     notes.push(newNote);
     res.status(201).json(newNote);
